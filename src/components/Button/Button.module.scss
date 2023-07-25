@@ -1,0 +1,53 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  white-space: nowrap;
+
+  &.primary {
+    background: #744ced;
+    color: #f6f9fa;
+    padding: 12px 24px;
+
+    @media (max-width: 768px) {
+      padding: 9px 24px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  &.secondary {
+    height: 34px;
+    background: transparent;
+    font-size: 14px;
+    color: #744ced;
+  }
+
+  &[disabled] {
+    background: #e6e7fa;
+    color: #cdcadc;
+    pointer-events: none;
+
+    .icon svg path {
+      fill: #cdcadc;
+      stroke: #cdcadc;
+    }
+  }
+
+  > .icon {
+    margin-left: 5px;
+    display: flex;
+
+    @media (max-width: 768px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
